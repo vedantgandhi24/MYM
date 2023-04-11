@@ -17,6 +17,10 @@ app.use(express.json({ extended: false }));
 //Define routes
 app.use("/api/users", require("./routes/users"));
 
+app.get("/test", (req, res) => {
+	res.send("WELCOME!!!");
+});
+
 const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
