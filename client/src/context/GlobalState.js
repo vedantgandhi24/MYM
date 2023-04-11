@@ -65,6 +65,7 @@ export const GlobalProvider = ({ children }) => {
 		// }
 
 		try {
+			console.log("LOGDATA", loginData);
 			const { data } = await api.signIn(loginData);
 			// console.log("LOGIN", data);
 			dispatch({ type: "LOGIN", payload: data });

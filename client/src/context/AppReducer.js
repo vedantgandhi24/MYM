@@ -27,7 +27,7 @@ export default (state, action) => {
 				isAuthenticated: true,
 			};
 		case "GOOGLE_REGISTER":
-			console.log("REDUCER INFO", action.payload.data);
+			// console.log("REDUCER INFO", action.payload.data);
 			localStorage.setItem("user_info", JSON.stringify(action.payload.data));
 			// localStorage.setItem("token", action.payload.token);
 			return {
@@ -59,7 +59,7 @@ export default (state, action) => {
 			};
 
 		case "USER_ERROR":
-			console.log(action.payload);
+			// console.log(action.payload);
 			return {
 				...state,
 				error: action.payload,

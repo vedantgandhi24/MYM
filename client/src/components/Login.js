@@ -24,7 +24,7 @@ const Login = () => {
 
 	const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value });
 
-	const onSubmit = (e) => {
+	const onLogin = (e) => {
 		e.preventDefault();
 		console.log("Email", email);
 		console.log("Pass", password);
@@ -42,10 +42,7 @@ const Login = () => {
 
 	return (
 		<div className='container d-flex justify-content-center mt-4'>
-			<form
-				onSubmit={onSubmit}
-				className='card bg-white px-3'
-				style={{ width: "40%" }}>
+			<form className='card bg-white px-3' style={{ width: "40%" }}>
 				<h1 className='d-flex justify-content-center'>Account Login</h1>
 				<div className='row mt-2 mb-2'>
 					<div className='col-12'>
@@ -80,13 +77,10 @@ const Login = () => {
 				</div>
 
 				<div className='d-flex justify-content-center mx-auto mb-4'>
-					<button type='submit' className='btn btn-danger me-4'>
+					<button className='btn btn-danger me-4' onClick={onLogin}>
 						Login
 					</button>
-					<button
-						type='button'
-						className='btn btn-primary'
-						onClick={() => gogLogin()}>
+					<button className='btn btn-primary' onClick={() => gogLogin()}>
 						Signin with Google
 					</button>
 				</div>
